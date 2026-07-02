@@ -1,4 +1,4 @@
-## 🌐 CreativeTim-Razor10-Identity-docker
+## 🌐 Argon-Razor10-Identity-docker
 Exemplo de renderização CreativeTim em C# ASP.NET Core 10 com banco de dados Postgres.
 
 #### 🎨 Aqui está uma demonstração do projeto
