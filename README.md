@@ -28,15 +28,20 @@ dotnet dev-certs https -ep "$env:USERPROFILE\.aspnet\https\argonapp.pfx" -p "Cry
 #### ⚠️ String de conexão do banco 
 Alterar em todos arquivos **YML** e **appsettings** o campo **[SUA_SENHA]** colocar sua senha localhost do Postgres.
 
+-Nos arquivos **appsettings** 
 ```bash
  "PostgresConnection": "Host=localhost;Port=5432;Database=creativeTim;User Id=postgres;Password=[SUA_SENHA]"
 ```
-Nos arquivos **YML** e Conexões  
+-Nos arquivos **YML**  
 ```bash
 POSTGRES_PASSWORD: '[SUA_SENHA]'
 ```
 ```bash
  CONNECTIONSTRINGS__POSTGRESCONNECTION=Server=db;Port=5432;Database=creativeTim;User Id=postgres;Password=[SUA_SENHA]
+```
+No arquivo **ApplicationDbContextFactory.cs**  
+```bash
+ optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=creativeTim;User Id=postgres;Password=[SUA_SENHA]");
 ```
 
 #### 🔄 Executar a aplicação
