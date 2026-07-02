@@ -78,6 +78,11 @@ Para primeiro acesso usuario: **admin@argon.com** senha: **Secret1+**
 #### 🔍 Docker Postgres 
 Para verificar se a database **creativeTim** está no docker acesse o banco com os commandos, para verificar as tabelas. 
 
+
+**Observação:** Para manipular os dados do **Postgres** no **Docker** alterar **appsettings**, após configurado o banco de dados.
+- Deve se trocar **Server=localhost** por **Host=db** nos arquivos **appsettings** , os Postgres aceita o dialeto tanto a palavra **Server** como a palavra **Host** para distinguir o Servidor. 
+
+
 VSCode Terminal [4]
 ```bash 
 docker exec -it argon-dashboard-asp-net-master-db-1 psql -U postgres
@@ -113,9 +118,6 @@ SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'creative
 ;
 DROP DATABASE "creativeTim";
 ```
-
-**Observação:** Para Utilizar o **Postgres** direto no **Docker** alterar nos **appsettings**.
-- Após configurado o banco de dados, deve se trocar **Server=localhost** por **Host=db** nos **appsettings** , os Postgres aceita o dialeto tanto a palavra **Server** como a palavra **Host** para distinguir o Servidor. 
 
 
 #### 💡 Relação tabelas Identity ASPNET da Microsoft 
