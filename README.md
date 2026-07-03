@@ -1,5 +1,5 @@
 ## 🌐 Argon-RazorPages10-Identity-docker
-Exemplo de renderização CreativeTim em C# ASP.NET Core 10 com banco de dados Postgres.
+Exemplo de renderização Argon Dashboard em C# ASP.NET Core 10 com banco de dados Postgres.
 
 #### 🎨 Aqui está uma demonstração do projeto
 <img width="800" height="350" alt="image" src="https://github.com/user-attachments/assets/82458208-621e-444d-bbaf-71feeb5fb4c3" />
