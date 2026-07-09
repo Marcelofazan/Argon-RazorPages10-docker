@@ -12,7 +12,9 @@ Exemplo de renderização Argon Dashboard em C# ASP.NET Core 10 com banco de dad
 | **Identity** | Serviços de autenticação, autorização e gerenciamento de acessos,  garantindo que apenas as pessoas e entidades autorizadas acessem recursos e dados |
 
 #### 💬 Requisitos do Projeto
-Instalar Certificado válido SSL 
+- Necessário **Docker** instalado.
+- Instalar Certificado válido **SSL**
+ 
 - Garante que a pasta existe no seu Windows
 ```bash
 mkdir -Force "$env:USERPROFILE\.aspnet\https"
