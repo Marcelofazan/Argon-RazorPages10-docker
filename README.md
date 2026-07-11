@@ -131,7 +131,7 @@ DROP DATABASE "creativeTim";
 ```
 
 
-#### 💡 Relação tabelas Identity ASPNET da Microsoft 
+#### ⚙️ Identity ASPNET relação de tabelas
 | Tabela | Descrição |
 |-----------|-----------|
 | **AspNetRoles** |  Armazena os papéis/perfis de acesso (ex: Admin, Usuário). |
