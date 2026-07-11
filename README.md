@@ -1,5 +1,5 @@
 ## 🌐 Argon-RazorPages10-docker
-Exemplo de renderização Argon Dashboard em C# ASP.NET Core 10 com banco de dados Postgres.
+Exemplo de renderização Argon Dashboard em C# ASP.NET Core 10 EF com banco de dados Postgres.
 
 #### 🎨 Aqui está uma demonstração do projeto
 <img width="800" height="350" alt="image" src="https://github.com/user-attachments/assets/82458208-621e-444d-bbaf-71feeb5fb4c3" />
@@ -51,27 +51,29 @@ No arquivo **ApplicationDbContextFactory.cs**
  optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=creativeTim;User Id=postgres;Password=[SUA_SENHA]");
 ```
 
-#### 🔄 Executar a aplicação
+#### 🔄 Executar a aplicação Docker
 VSCode Terminal [1]
-```bash
-cd CreativeTim.Argon.DotNetCore.Free
-dotnet restore
-dotnet build
-dotnet ef migrations add InitialCreate
-docker-compose up --build  
-```
 
-VSCode Terminal [2]
-- Necessário verificar se em Serviços o Postgres está iniciado. 
+- Iniciar Container
 ```bash
-cd CreativeTim.Argon.DotNetCore.Free
-dotnet ef database update 
+docker-compose up --build
 ```
 
 VSCode Terminal [3]
 - Fechar Container
 ```bash
-docker-compose down 
+docker compose down 
+```
+
+#### 🔄 Executar a aplicação Desenvolvimento Local
+VSCode Terminal [1]
+- Necessário verificar se em Serviços o Postgres está iniciado.
+```bash
+cd CreativeTim.Argon.DotNetCore.Free
+dotnet restore
+dotnet build
+dotnet ef migrations add InitialCreate
+dotnet ef database update 
 ```
 
 A aplicação ficará disponivel em **https://localhost:44308/**
